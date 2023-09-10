@@ -15,7 +15,7 @@ use ieee.numeric_std.all;
 --use UNISIM.VComponents.all;
 package RISC_pack is
 --list of instructions 
-type OPCODE_TYPE is (nopo,addo,subo,ando,oro,xoro,also,srao,mvo,addilo,addiho,ldi,sto,jmpo,bne,blt,bgeo);
+type OPCODE_TYPE is (nopo,addo,subo,ando,oro,xoro,slao,srao,mvo,addilo,addiho,ldo,sto,jmpo,bneo,blto,bgeo);
 constant DATA_WIDTH :natural:=16;
 constant INSTRUCTION_WIDTH :natural:=16;
 constant OPCODE_WIDTH :natural :=5;
@@ -30,7 +30,7 @@ subtype PC_ADDRESS_TYPE is unsigned (PC_ADDRESS_WIDTH-1 downto 0 ); --8
 subtype DATA_ADDRESS_TYPE is unsigned (DATA_ADDRESS_WIDTH - 1 downto 0); --9
 subtype REGISTER_ADDRESS_TYPE is bit_vector (REGISTER_ADDRESS_WIDTH - 1 downto 0);--3
 
-type register_file_type is array(0 to register_count-1) of DATA_TYPE;  --8
+type register_file_type is array(0 to register_count-1) of DATA_TYPE;  --8 bit array
 
 --function protopytes 
 function Zero_ext ( INP : std_logic_vector; L: natural)return std_logic_vector ;
