@@ -35,16 +35,16 @@ entity if_phase is
 Port( clk : in bit ;
       reset : in bit;
       jump_taken_ex : in bit;
-      jump_dest_ex : in pc_address_type;
+      jump_dest_ex : in pc_address_type; --8bit
       pc_act : out pc_address_type;
       pc_id : out pc_address_type
     );
 end if_phase;
 
 architecture Behavioral of if_phase is
-signal pc_act_int : pc_address_type; --actual programm counter 
-
+signal pc_act_int : pc_address_type; --actual programm counter 8bit
 begin
+
 pc:process(clk,reset)  --programm counter 
 begin 
     if reset ='1' then 
@@ -59,7 +59,7 @@ begin
     end if;
 end process pc;
 
-if_id :process(clk,reset) -- if pipe;ine register 
+if_id :process(clk,reset) -- if pipeline register 
 begin 
     if reset ='1' then 
         pc_id <= (others => '0') after 5 ns;

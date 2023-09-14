@@ -60,7 +60,7 @@ dx_dest:process(dest,en)
 begin 
   dest_sel <=(others=>'0');
   if en ='1' then 
-  dest_sel(TO_integer(unsigned (to_stdlogicvector (dest))))<='1' after 5 ns;
+  dest_sel(to_integer(unsigned (to_stdlogicvector (dest))))<='1' after 5 ns;
   end if;
 end process dx_dest;
 

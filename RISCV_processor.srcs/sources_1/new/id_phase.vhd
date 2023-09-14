@@ -34,11 +34,11 @@ use IEEE.NUMERIC_STD.ALL;
 entity id_phase is
 Port (clk :in bit;
       reset : in bit;
-      pc_id : pc_address_type;
+      pc_id : in pc_address_type;
       i_id : in instruction_type;
       data_wb : in data_type;
       dest_wb : in register_address_type;
-      dest_en_wb : in register_address_type;
+      dest_en_wb : in bit;
       zflag, nflag : in bit ;
       
       jump_taken_ex : out bit;
@@ -58,6 +58,18 @@ signal src1,src2: register_address_type;
 signal jump_taken : bit ;
 signal jump_dest : pc_address_type;
 signal opc_id_int : opcode_type;
+
+component regfile 
+port (clk, reset: in bit; 
+      src1, src2: in register_address_type; 
+      data : in data_type; 
+      dest : in register_address_type; 
+      en : in bit; 
+      regfilex: out register_file_type; 
+      reg_a, reg_b: out data_type 
+ ); 
+end component;
+
 
 begin
 --process opdec decode the actual instruction
@@ -124,11 +136,11 @@ begin
         or ((opc_id_int = bneo) and (zflag ='0')) -- next consider branches 
         or ((opc_id_int = blto) and (nflag ='1')) 
         or ((opc_id_int = bgeo) and ((nflag='0') or (zflag='1'))) ) then
-        jump_taken <= '1' after 5 ns; 
+            jump_taken <= '1' after 5 ns; 
     end if; 
 end process jump_taken_p; 
 -- registerfile component instantiation 
-dut: regfile port map(clk, reset, src1, src2, data_wb, dest_wb, dest_en_wb, regfilex, reg_a, reg_b); 
+dut: regfile port map(clk => clk,reset => reset, src1 => src1, src2 =>src2, data => data_wb ,dest => dest_wb, en => dest_en_wb, regfilex=> regfilex,reg_a=> reg_a,reg_b => reg_b); 
 --id/ex pipeline register 
 id_ex_interface: process(reset,clk) 
 begin

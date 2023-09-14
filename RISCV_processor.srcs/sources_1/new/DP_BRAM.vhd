@@ -34,7 +34,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity dp_bram is 
 Port (clk :in bit ;
        -- instruction.memory inferface :
-      pc_act :in unsigned (pc_address_width - 2 downto  0); -- 8bit
+      pc_act :in unsigned (pc_address_width - 1 downto  0); -- 8bit
       i_id : out instruction_type ; --16bit
       --data memory interface :
       op_result_mem : in unsigned (data_address_width- 2 downto  0); --8 bit 
@@ -45,7 +45,7 @@ Port (clk :in bit ;
        );
 end DP_BRAM;
 
-architecture rtl of DP_BRAM is
+architecture Behavioral of DP_BRAM is
 --hochste address des speichers :2hoch9 - 1 = 511:
 type ram_type is array (0 to 2**(pc_address_width + 1)-1) of instruction_type; --2 hoch 9 -1 =512-1=511/array indices form 0 to 511/instruktion type 16 bit 
 signal i_addr, d_addr : unsigned(8 downto 0); --effektive addressen
@@ -94,7 +94,7 @@ begin
         end if;
     end if;
 end process p2;    
-end rtl;
+end Behavioral;
 
 
 
