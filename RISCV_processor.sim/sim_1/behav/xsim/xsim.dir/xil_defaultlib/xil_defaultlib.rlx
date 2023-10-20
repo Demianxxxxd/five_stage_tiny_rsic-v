@@ -1,0 +1,14 @@
+0.7
+2020.2
+Oct 14 2022
+05:20:55
+D:/TUM/four_stage_risc-v/RISCV_processor.srcs/sim_1/new/risc_tb.vhd,1697739955,vhdl,,,,risc_tb,,,,,,,,
+D:/TUM/four_stage_risc-v/RISCV_processor.srcs/sources_1/new/DP_BRAM.vhd,1694697849,vhdl,D:/TUM/four_stage_risc-v/RISCV_processor.srcs/sources_1/new/risc.vhd,,,dp_bram,,,,,,,,
+D:/TUM/four_stage_risc-v/RISCV_processor.srcs/sources_1/new/RISC_pack.vhd,1694228223,vhdl,D:/TUM/four_stage_risc-v/RISCV_processor.srcs/sim_1/new/risc_tb.vhd;D:/TUM/four_stage_risc-v/RISCV_processor.srcs/sources_1/new/DP_BRAM.vhd;D:/TUM/four_stage_risc-v/RISCV_processor.srcs/sources_1/new/ex_phase.vhd;D:/TUM/four_stage_risc-v/RISCV_processor.srcs/sources_1/new/id_phase.vhd;D:/TUM/four_stage_risc-v/RISCV_processor.srcs/sources_1/new/if_phase.vhd;D:/TUM/four_stage_risc-v/RISCV_processor.srcs/sources_1/new/mem_phase.vhd;D:/TUM/four_stage_risc-v/RISCV_processor.srcs/sources_1/new/risc.vhd,,,risc_pack,,,,,,,,
+D:/TUM/four_stage_risc-v/RISCV_processor.srcs/sources_1/new/ex_phase.vhd,1694699255,vhdl,D:/TUM/four_stage_risc-v/RISCV_processor.srcs/sources_1/new/risc.vhd,,,ex_phase,,,,,,,,
+D:/TUM/four_stage_risc-v/RISCV_processor.srcs/sources_1/new/id_phase.vhd,1694699251,vhdl,D:/TUM/four_stage_risc-v/RISCV_processor.srcs/sources_1/new/risc.vhd,,,id_phase,,,,,,,,
+D:/TUM/four_stage_risc-v/RISCV_processor.srcs/sources_1/new/if_phase.vhd,1694699254,vhdl,D:/TUM/four_stage_risc-v/RISCV_processor.srcs/sources_1/new/risc.vhd,,,if_phase,,,,,,,,
+D:/TUM/four_stage_risc-v/RISCV_processor.srcs/sources_1/new/mem_phase.vhd,1694699256,vhdl,D:/TUM/four_stage_risc-v/RISCV_processor.srcs/sources_1/new/risc.vhd,,,mem_phase,,,,,,,,
+D:/TUM/four_stage_risc-v/RISCV_processor.srcs/sources_1/new/reg.vhd,1694133537,vhdl,D:/TUM/four_stage_risc-v/RISCV_processor.srcs/sources_1/new/regfile.vhd,,,reg,,,,,,,,
+D:/TUM/four_stage_risc-v/RISCV_processor.srcs/sources_1/new/regfile.vhd,1694398962,vhdl,,,,regfile,,,,,,,,
+D:/TUM/four_stage_risc-v/RISCV_processor.srcs/sources_1/new/risc.vhd,1694697463,vhdl,D:/TUM/four_stage_risc-v/RISCV_processor.srcs/sim_1/new/risc_tb.vhd,,,risc,,,,,,,,

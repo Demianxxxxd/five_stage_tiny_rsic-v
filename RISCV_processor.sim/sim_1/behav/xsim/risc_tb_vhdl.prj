@@ -1,0 +1,15 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../RISCV_processor.srcs/sources_1/new/RISC_pack.vhd" \
+"../../../../RISCV_processor.srcs/sources_1/new/DP_BRAM.vhd" \
+"../../../../RISCV_processor.srcs/sources_1/new/ex_phase.vhd" \
+"../../../../RISCV_processor.srcs/sources_1/new/id_phase.vhd" \
+"../../../../RISCV_processor.srcs/sources_1/new/if_phase.vhd" \
+"../../../../RISCV_processor.srcs/sources_1/new/mem_phase.vhd" \
+"../../../../RISCV_processor.srcs/sources_1/new/reg.vhd" \
+"../../../../RISCV_processor.srcs/sources_1/new/regfile.vhd" \
+"../../../../RISCV_processor.srcs/sources_1/new/risc.vhd" \
+"../../../../RISCV_processor.srcs/sim_1/new/risc_tb.vhd" \
+
+# Do not sort compile order
+nosort
